@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(
+    90deg,
+    #f6cfbe 0%,
+    #b9dcf2 100%
+  );
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  width: 500px;
+  min-height: 500px;
+  background: black;
+  text-align: center;
+  margin: 96px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+h1 {
+  margin: 32px auto;
+  color: white;
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.task-form {
+  margin-bottom: 32px;
+}
+
+.task-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #4dc9e6;
+  /* outline: none; */
+  width: 320px;
+  background: transparent;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    #4dc9e6 0%,
+    #210cae 100%
+  );
+  color: white;
+}
+
+.task-input.edit {
+  border: 2px solid #f7ba2c;
+}
+
+.task-button.edit {
+  background: linear-gradient(
+    90deg,
+    #f7ba2c 0%,
+    #ea5459 100%
+  );
+  padding: 16px 22px;
+}
+
+.task-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: black;
+  background: linear-gradient(
+    90deg,
+    #f4f269 0%,
+    #5cb270 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.task-row:nth-child(2n + 1) {
+  background: linear-gradient(
+    90deg,
+    #ffcb6b 0%,
+    #3d8bff 100%
+  );
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: white;
+}
+
+.edit-icon {
+  color: white;
 }
