@@ -78,7 +78,9 @@ const TaskItem = ({
       ref={ref}
       data-handler-id={handlerId}
     >
-      <div onClick={() => completeItem(id)}>{text}</div>
+      <div className="textbox" onClick={() => completeItem(id)}>
+        {text}
+      </div>
       <div className="icons">
         <RiCloseCircleLine
           onClick={() => deleteItem(id)}
