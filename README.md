@@ -5,7 +5,11 @@ https://kaleidoscopic-pothos-0dd07a.netlify.app/
 
 ## Introduction
 
-This is a code repository for a todo-list application with drag-and-drop functionality for repositioning the task-items.
+This is a code repository for a todo-list application with the following functionalities:
+
+- add, edit and delete tasks from the list
+- mark tasks as complete by clicking on them
+- reposition tasks using drag-and-drop
 
 This app is built using JavaScript and using React, React DnD libraries.
 
